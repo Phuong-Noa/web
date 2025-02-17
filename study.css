@@ -1,0 +1,50 @@
+body{
+    height: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.slideshow{
+    width: 500px;
+    overflow: hidden;
+    position: relative;
+}
+.list-image{
+    display: flex;
+    transform: translateX();
+    transition: 0.5s;
+}
+.btn:hover{
+    color: white;
+}
+.btn{
+    font-size: 45px;
+    color: gray;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.btn-left{
+    left: 0;
+}
+.btn-right{
+    right: 0;
+}
+.index-image{
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.index-item{
+    border: 2px solid #fff;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 50%; 
+}
+.active{
+    background-color: #fff;
+}

@@ -1,0 +1,12 @@
+.main{
+    display: flex;
+    gap: 20px;
+}
+.tabs{
+    display: flex;
+    gap:20px;
+}
+.active {
+    font-size: 18px;
+    font-weight: 600;
+}
