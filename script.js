@@ -1,41 +1,61 @@
-const listImage = document.querySelector('.list-image')
-const imgs = document.getElementsByTagName('img')
-const length = imgs.length
-const btnLeft = document.querySelector(`.btn-left`)
-const btnRight = document.querySelector(`.btn-right`)
-let current = 0
-let width = imgs[0].offsetWidth; // Lấy chiều rộng của ảnh
+const slider = document.querySelector('.manga-list');
+const btnLeft = document.querySelector('.btn-left');
+const btnRight = document.querySelector('.btn-right');
 
-const handleChangeSlide = () => {
-    if (current == length - 1) {
-        // Quay lại ảnh đầu tiên
-        listImage.style.transform = `translateX(0px)`
-        current = 0; // Reset lại current khi quay lại ảnh đầu tiên
-        document.querySelector(`.active`).classList.remove(`active`)
-        document.querySelector(`.index-item-` + current).classList.add(`active`)
-    } else {
-        listImage.style.transform = `translateX(${width * -1 * (current + 1)}px)`
-        current++; // Cập nhật current để chuyển ảnh
-    }
-}
+let isDown = false;
+let startX;
+let scrollLeft;
 
-let handldeEventChangeSlide = setInterval(handleChangeSlide, 4000);
-btnRight.addEventListener(`click`, () => {
-    clearInterval(handldeEventChangeSlide)
-    handleChangeSlide()
-    handldeEventChangeSlide = setInterval(handleChangeSlide, 4000);
-})
+// Bắt đầu kéo
+slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+});
 
-btnLeft.addEventListener(`click`, () => {
-    clearInterval(handldeEventChangeSlide)
-    if (current == 0) {
-        current = length - 1;
-        listImage.style.transform = `translateX(${width * -1 * current}px)`
-        // Reset lại current khi quay lại ảnh đầu tiên
-    } else {
-        current--;
-        listImage.style.transform = `translateX(${width * -1 * (current)}px)`
-        // Cập nhật current để chuyển ảnh
-    }
-    handldeEventChangeSlide = setInterval(handleChangeSlide, 4000);
-})
+slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.classList.remove('active');
+});
+
+slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove('active');
+});
+
+slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 2; // Điều chỉnh tốc độ kéo
+    slider.scrollLeft = scrollLeft - walk;
+});
+
+// Thêm quán tính
+let isScrolling;
+slider.addEventListener('scroll', () => {
+    window.clearTimeout(isScrolling);
+    isScrolling = setTimeout(() => {
+        let closest = Math.round(slider.scrollLeft / 210) * 210; // Snapping vào từng manga
+        slider.scrollTo({ left: closest, behavior: 'smooth' });
+    }, 100);
+});
+
+// Nút bấm trượt
+btnLeft.addEventListener('click', () => {
+    slider.scrollBy({ left: -210, behavior: 'smooth' });
+});
+
+btnRight.addEventListener('click', () => {
+    slider.scrollBy({ left: 210, behavior: 'smooth' });
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdowns = document.querySelectorAll(".dropdown");
+
+    dropdowns.forEach(dropdown => {
+        dropdown.addEventListener("click", function () {
+            this.querySelector(".dropdown-menu").classList.toggle("active");
+        });
+    });
+});
