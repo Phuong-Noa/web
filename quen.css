@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +7,7 @@
 }
 
 body {
-    background-image: url(images/Login_Pad_BG.png);
+    background-image:url(images/Login_Pad_BG.png);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,7 +36,6 @@ h1 {
     font-size: 24px;
     font-weight: bold;
 }
-
 .login-box {
     background-color: azure;
     padding: 30px;
@@ -65,17 +65,19 @@ input {
     border: none;
     border-radius: 5px;
     background-color: aliceblue;
-    color: blue;
+    color:blue;
 
 }
-
-.Forgot {
+.Forgot{
     display: flex;
 }
-
+.Forgot a{
+    text-decoration: none;
+}
 .remember-forgot {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
+    align-items: center;
     font-size: 14px;
 }
 
@@ -108,8 +110,7 @@ button {
     color: black;
     text-decoration: none;
 }
-
-.another {
+.another{
     display: inline;
     justify-self: center;
 }
@@ -123,15 +124,13 @@ button {
     color: rgb(255, 220, 226);
     text-decoration: none;
 }
-
 .social-login {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.google-btn,
-.facebook-btn {
+.google-btn, .facebook-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -154,7 +153,7 @@ button {
 }
 
 .facebook-btn {
-    background-color: blue;
+    background-color: blue ;
     color: white;
 }
 

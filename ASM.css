@@ -3,26 +3,37 @@
     padding: 0;
     box-sizing: border-box;
 }
-.icon{
+
+.icon {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
-.foot{
+
+main {
+    width: 1260px;
+    margin: auto;
+    ;
+}
+
+.foot {
     display: inline;
     justify-content: center;
     align-items: center;
 }
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f9f9f9;
     color: #333;
 }
+
 .navbar {
     background-color: #111;
     padding: 10px 0;
     text-align: center;
+    margin-top: 10px;
 }
 
 .navbar ul {
@@ -50,52 +61,74 @@ body {
 .navbar a:hover {
     color: blue;
 }
+.search-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: none;
+    width: 300px;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+}
+
+.search-box button:hover {
+    color: black;
+}
 
 .dropdown {
     position: relative;
-    display: inline-block;
-}
 
-.dropdown-menu {
-    display: none;
+}
+.dropdown a {
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+.dropdown-menu2 {
+    display: none !important;
     position: absolute;
     background-color: #222;
-    top: 100%;
     left: 0;
-    min-width: 180px; 
-    padding: 10px 0;
+    min-width: 400px;
+    padding: 10px;
     border-radius: 5px;
     text-align: left;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
     z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
-    transform: translateY(5px);
 }
 
-.dropdown-menu li {
-    display: block;
-    padding: 8px 15px;
+.dropdown>a:hover + .dropdown-menu2 {
+    display: block !important;
 }
 
-.dropdown-menu a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    transition: 0.2s;
+.dropdown-menu2:hover {
+    display: block !important;
 }
 
-.dropdown-menu a:hover {
+.dropdown-menu2 li {
+    padding: 5px 0;
+}
+
+.dropdown-menu2 a:hover {
     background-color: #333;
-}
-
-/* Hiển thị dropdown khi hover */
-.dropdown:hover .dropdown-menu {
-    display: block;
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
 }
 
 header {
@@ -119,6 +152,12 @@ header nav ul {
     list-style: none;
 }
 
+.new {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
 header nav ul li a {
     text-decoration: none;
     color: white;
@@ -135,6 +174,7 @@ header nav ul li a:hover {
     margin: 2em;
     gap: 2em;
 }
+
 .manga-slider {
     position: relative;
     width: 100%;
@@ -142,9 +182,11 @@ header nav ul li a:hover {
     text-align: center;
     padding: 10px 0;
 }
+
 .manga-slider:active {
     cursor: grabbing;
 }
+
 .manga-slider {
     position: relative;
     overflow: hidden;
@@ -158,11 +200,11 @@ header nav ul li a:hover {
     scroll-behavior: smooth;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    scrollbar-width: none; /* Ẩn thanh cuộn */
+    scrollbar-width: none;
 }
 
 .manga-list::-webkit-scrollbar {
-    display: none; /* Ẩn thanh cuộn trên Chrome, Safari */
+    display: none;
 }
 
 .manga {
@@ -176,42 +218,18 @@ header nav ul li a:hover {
     border-radius: 5px;
 }
 
-.btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 30px;
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.btn-left {
-    left: 10px;
-}
-
-.btn-right {
-    right: 10px;
-}
-
-.btn:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
-
 .manga-list {
     display: flex;
     gap: 10px;
-    transition: transform 0.8s ease-in-out; /* Giảm thời gian để trượt nhanh hơn */
+    transition: transform 0.8s ease-in-out;
     will-change: transform;
-    padding-left: 0; /* Đảm bảo không có padding dư thừa */
+    padding-left: 0;
 }
 
 .manga-cover {
     position: relative;
     width: 200px;
-    user-select: none; /* Không cho chọn ảnh khi kéo */
+    user-select: none;
 }
 
 .manga-cover img {
@@ -220,33 +238,14 @@ header nav ul li a:hover {
     object-fit: cover;
     border-radius: 5px;
     display: block;
-    pointer-events: none; /* Tránh ảnh bị chọn khi kéo */
+    pointer-events: none;
 }
-.btn {
-    font-size: 30px;
-    color: gray;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: 0.8s;
+
+.manga:hover {
+
     cursor: pointer;
 }
 
-.btn-left {
-    left: 10px;
-}
-
-.btn-right {
-    right: 10px;
-}
-
-.btn:hover {
-    color: white;
-}
-.manga:hover{
-    
-    cursor: pointer;
-}
 .overlay {
     position: absolute;
     bottom: 0;
@@ -256,7 +255,7 @@ header nav ul li a:hover {
     padding: 5px;
     text-align: center;
     border-radius: 0 0 5px 5px;
-    z-index: 10; 
+    z-index: 10;
 }
 
 .overlay h3 {
@@ -275,38 +274,146 @@ footer {
     color: black;
     font-size: 0.9rem;
     margin-top: 2rem;
-}   
-.btn:hover{
-    color: white;
 }
-.btn{
-    font-size: 45px;
-    color: gray;
-    position: absolute;
-    top:50%;
-    transform: translateY(-50%);
-    transition: 0.5s;
-    cursor: pointer;
-}
-.btn-left{
-    left: 0;
-}
-.btn-right{
-    right: 0;
-}
-.index-image{
+
+.index-image {
     position: absolute;
     bottom: 10px;
     display: flex;
     left: 100%;
     transform: translateX(-100%);
 }
-.index-item{
+
+.index-item {
     border: 2px solid #fff;
     padding: 5px;
     margin: 5px;
-    border-radius: 50%; 
+    border-radius: 50%;
 }
-.active{
+
+.active {
     background-color: #fff;
+}
+
+.div2 {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.manga-list2 {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.manga-item {
+    display: flex;
+    width: 430px;
+    align-items: center;
+    background: gray;
+    padding: 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.manga-item:hover {
+    background: #444;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    margin: auto;
+    gap: 20px;
+}
+
+.manga-item img {
+    width: 40px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.manga-item .info h3 {
+    font-size: 14px;
+    color: white;
+}
+
+.manga-item .info p {
+    font-size: 12px;
+    color: #bbb;
+}
+
+.ranking-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.div3 {
+    display: flex;
+    gap: 10px;
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5px;
+    max-width: 2000px;
+    margin: auto;
+}
+
+.header-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.latest-manga-section {
+    width: 70%;
+}
+
+.ranking-list li {
+    display: flex;
+    align-items: center;
+    background: gray;
+    padding: 6px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.ranking-list li:hover {
+    background: #444;
+}
+
+.ranking-section {
+    width: 30%;
+}
+
+.rank {
+    font-size: 16px;
+    font-weight: bold;
+    color: #e74c3c;
+    width: 24px;
+    text-align: center;
+}
+
+.ranking-list img {
+    width: 40px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.ranking-list .info h3 {
+    font-size: 14px;
+    color: white;
+}
+
+.ranking-list .info p {
+    font-size: 12px;
+    color: #bbb;
 }

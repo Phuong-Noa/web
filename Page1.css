@@ -1,12 +1,142 @@
-.main{
-    display: flex;
-    gap: 20px;
+body {
+    color: black;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
-.tabs{
+.container {
     display: flex;
-    gap:20px;
+    justify-content: space-between;
+    padding: 40px;
 }
-.active {
+.manga-details {
+    display: flex;
+    gap: 20px; 
+}
+.details{
+    display: fl;
+}
+.manga-cover {
+    width: 220px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: none;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+.info {
+    flex: 1;
+}
+.stats {
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+    font-size: 14px;
+}
+.stats span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.ranking {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+}
+.ranking h2 {
+    color: blue;
     font-size: 18px;
-    font-weight: 600;
+    margin-bottom: 10px;
+}
+.ranking ul {
+    list-style: none;
+    padding: 0;
+}
+.ranking li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+.ranking img {
+    width: 40px;
+    height: 55px;
+    border-radius: 5px;
+}
+.read-now {
+    background: gray;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.manga-content {
+    background: gray;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.manga-content h2 {
+    color: none ;
+}
+
+.manga-content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.highlight {
+    color: blue;
+    font-weight: bold;
+}
+
+.chapter-list {
+    background: gray;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.chapter-list h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: gray;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background: gray;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    color: white;
+}
+
+td a {
+    color: white;
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+tr:nth-child(even) {
+    background: gray;
 }

@@ -6,14 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MILLENNIUM</title>
     <link rel="stylesheet" href="ASM.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="icon" href="images/logo mellennium.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <h1><a href="#Home">MangaDex</a></h1>
+            <h1><a href="#Home">MILLENNIUM</a></h1>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Tìm truyện...">
+            <button type="submit"><i class="fa fa-search"></i></button>
         </div>
         <nav>
             <ul>
@@ -21,75 +25,61 @@
             </ul>
         </nav>
     </header>
-
-    <!-- <div class="container">
-        <aside class="sidebar">
-            <ul>
-                <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i><b>Home</b></i></a></li>
-                <li><a href="#"><img src="images/book-mark.png" width="20px"><b>Follows</b></a></li>
-                <li><a href="#">Update</a></li>
-                <li><a href="#"></i> Library</a></li>
-                <li><a href="#"></i> MD Lists</a></li>
-                <li><a href="#"></i> My Groups</a></li>
-                <li><a href="#"></i> Reading History</a></li>
-                <li><a href="#"></i> <img src="images/book.png" width="20px"><b>Titles</b></a></li>
-                <li><a href="#"></i> Advanced Search</a></li>
-                <li><a href="#"></i> Recently Added</a></li>
-                <li><a href="#"></i> Last Update</a></li>
-                <li><a href="#"></i> Random</a></li>
-                <li><a href="#"><img src="images/group.png" width="20px"> <b>Community</b></a></li>
-                <li><a href="#"></i> Forums</a></li>
-                <li><a href="#"></i> Groups</a></li>
-                <li><a href="#"></i> Users</a></li>
-                <li><a href="#"></i> <img src="images/thumbtacks.png" width="20px"><b>MangaDex</b></a></li>
-                <li><a href="#"></i> Site Rules</a></li>
-                <li><a href="#"></i> Announcements</a></li>
-                <li><a href="#"></i> About Us</a></li>
-                <hr>
-                </hr>
-                <div class="icon">
-                    <li><img src="images/discord.png" width="30px"></li>
-                    <li><img src="images/twitter.png" width="25px"></li>
-                    <li><img src="images/reddit.png" width="30px"></li>
-                    <li><img src="images/cardiogram.png" width="30px"></li>
-                    <p></p>
-                </div>
-                <div class="foot">
-                    v2024.11.17
-                    © MangaDex 2025
-                </div>
-            </ul>
-
-        </aside>  -->
-
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+            <li><a href="#">THEO DÕI</a></li>
+            <li><a href="#">HOT</a></li>
+            <li><a href="#">YÊU THÍCH</a></li>
+            <li><a href="#">MỚI CẬP NHẬT</a></li>
+            <li><a href="history.html">LỊCH SỬ</a></li>
+            <li class="dropdown">
+                <a href="#">THỂ LOẠI ▾</a>
+                <ul class="dropdown-menu2">
+                    <li><a href="#">One shot</a></li>
+                    <li><a href="#">Reincarnation</a></li>
+                    <li><a href="#">Time Travel</a></li>
+                    <li><a href="#">Loli</a></li>
+                    <li><a href="#">Monsters</a></li>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Drama</a></li>
+                    <li><a href="#">School Life</a></li>
+                    <li><a href="#">Psychological</a></li>
+                    <li><a href="#">Sports</a></li>
+                    <li><a href="#">Superhero</a></li>
+                    <li><a href="#">Martial Arts</a></li>
+                    <li><a href="#">Fan Colored</a></li>
+                    <li><a href="#">Samurai</a></li>
+                    <li><a href="#">Magical Girls</a></li>
+                    <li><a href="#">Mafia</a></li>
+                    <li><a href="#">Adventure</a></li>
+                    <li><a href="#">Self-Published</a></li>
+                    <li><a href="#">Virtual Reality</a></li>
+                    <li><a href="#">Office Workers</a></li>
+                    <li><a href="#">Video Games</a></li>
+                    <li><a href="#">Post-Apocalypse</a></li>
+                    <li><a href="#">Magic</a></li>
+                    <li><a href="#">Girls' Love</a></li>
+                    <li><a href="#">Harem</a></li>
+                    <li><a href="#">Military</a></li>
+                    <li><a href="#">Isekai</a></li>
+                    <li><a href="#">Doujinshi</a></li>
+                </ul>
+            </li>
+            <li><a href="#">TÌM TRUYỆN</a></li>
+            <li><a href="#">CON GÁI</a></li>
+            <li><a href="#">CON TRAI</a></li>
+            <li><a href="#">LIGHT NOVEL</a></li>
+        </ul>
+    </nav>
     <main>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#"><i class="fas fa-home"></i></a></li>
-                <li><a href="#">THEO DÕI</a></li>
-                <li><a href="#">HOT</a></li>
-                <li><a href="#">YÊU THÍCH</a></li>
-                <li><a href="#">MỚI CẬP NHẬT</a></li>
-                <li><a href="#">LỊCH SỬ</a></li>
-                <li class="dropdown">
-                    <a href="#">THỂ LOẠI ▾</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Romance</a></li>
-                        <li><a href="#">Comedy</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">TÌM TRUYỆN</a></li>
-                <li><a href="#">CON GÁI</a></li>
-                <li><a href="#">CON TRAI</a></li>
-                <li><a href="#">LIGHT NOVEL</a></li>
-            </ul>
-        </nav>
-        <h2>Latest Manga</h2>
+        <br>
+        <h2>Truyện đề cử</h2>
+        </br>
         <section class="manga-list">
             <div class="manga">
                 <div class="manga-cover">
-                    <a href="Fate.html"><img src="images/fate.jpg" alt="Manga Cover"></a>
+                    <a href="page1.html"><img src="images/fate.jpg" alt="Manga Cover"></a>
                     <div class="overlay">
                         <h3>Fate / Strange Fake</h3>
                         <p>Narita Ryohgo, TYPE-MOON, Morii Shizuki</p>
@@ -204,9 +194,276 @@
                     </div>
                 </div>
             </div>
-            <div class="btns">
-                <div class="btn-left btn"><i class='bx bx-chevron-left'></i></div>
-                <div class="btn-right btn"><i class='bx bx-chevron-right'></i></div>
+        </section>
+        </br>
+        <div class="container">
+            <div class="latest-manga-section">
+                <h2><i class="fa-solid fa-clock"></i> Truyện mới cập nhật</h2>
+                <div class="div3">
+                    <div class="div1">
+                        <div class="manga-list2">
+                            <div class="manga-item">
+                                <img src="images/global.jpg" alt="Blue Archive">
+                                <div class="info">
+                                    <h3>Blue Archive (Global)</h3>
+                                    <p>Chương 12 - 40 phút trước</p>
+                                </div>
+                            </div>
+                            <div class="manga-item">
+                                <img src="images/rezero.jpg" alt="Kamen Rider W">
+                                <div class="info">
+                                    <h3>Re:Zero</h3>
+                                    <p>Chương 11.2 - 3 giờ trước</p>
+                                </div>
+                            </div>
+                            <div class="manga-item">
+                                <img src="images/bluelock.jpg" alt="Blue Lock">
+                                <div class="info">
+                                    <h3>Blue Lock</h3>
+                                    <p>Chương 293 - 2 giờ trước</p>
+                                </div>
+                            </div>
+                            <div class="manga-item">
+                                <img src="images/Yume.jpg" alt="Blue Lock">
+                                <div class="info">
+                                    <h3>Blue Archive - Sensei Gyakutai Yume Senpai Imouto Gainen Series</h3>
+                                    <p>Chương 10 - 2 giờ trước</p>
+                                </div>
+                            </div>
+                            <div class="manga-item">
+                                <img src="images/staynight.jpg" alt="Blue Lock">
+                                <div class="info">
+                                    <h3>Fate/stay night [Unlimited Blade Works]</h3>
+                                    <p>Chương 110 </p>
+                                </div>
+                            </div>
+                            <div class="manga-item">
+                                <img src="images/W.jpg" alt="Blue Lock">
+                                <div class="info">
+                                    <h3>Kamen Rider W - Futo PI</h3>
+                                    <p>Chương 75 - 2 giờ trước</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="div2">
+                        <div class="manga-item">
+                            <img src="images/nokotan.jpg" alt="Nokotan">
+                            <div class="info">
+                                <h3>Shikanoko Nokonoko Koshitantan</h3>
+                                <p>Chương 47 - 2 giờ trước</p>
+                            </div>
+                        </div>
+                        <div class="manga-item">
+                            <img src="images/roshiderevol2.jpg" alt="Roshidere">
+                            <div class="info">
+                                <h3>Alya, Who Sits Next to Me, Sometimes Whispers Sweet Nothings in Russian</h3>
+                                <p>Chương 49 - 2 giờ trước</p>
+                            </div>
+                        </div>
+                        <div class="manga-item">
+                            <img src="images/miyako.jpg" alt="Miyako">
+                            <div class="info">
+                                <h3>Blue Archive - Kyorikan Bug no Usagi</h3>
+                                <p>Chương 1 - 2 giờ trước</p>
+                            </div>
+                        </div>
+                        <div class="manga-item">
+                            <img src="images/usagisquad.jpg" alt="Usagi Squad">
+                            <div class="info">
+                                <h3>Blue Archive Comic Anthology</h3>
+                                <p>Chương 13 - 2 giờ trước</p>
+                            </div>
+                        </div>
+                        <div class="manga-item">
+                            <img src="images/black clover.jpg" alt="Usagi Squad">
+                            <div class="info">
+                                <h3>Black Clover</h3>
+                                <p>Chương 378 - 2 giờ trước</p>
+                            </div>
+                        </div>
+                        <div class="manga-item">
+                            <img src="images/yuumei.jpg" alt="Usagi Squad">
+                            <div class="info">
+                                <h3>Yuumei VTuber no Ani Dakedo, Nazeka Ore ga Yuumei ni Natteita</h3>
+                                <p>Chương 1 - 2 giờ trước</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ranking-section">
+                <h2><i class="fa-solid fa-trophy"></i> Bảng xếp hạng tháng này</h2>
+                <ol class="ranking-list">
+                    <li>
+                        <span class="rank">1</span>
+                        <img src="images/solo.jpg" alt="Solo Leveling">
+                        <div class="info">
+                            <h3>Solo Leveling</h3>
+                            <p>289.7k lượt đọc</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="rank">2</span>
+                        <img src="images/dres.jpg" alt="My Dress-Up Darling">
+                        <div class="info">
+                            <h3>My Dress-Up Darling</h3>
+                            <p>231.2k lượt đọc</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="rank">3</span>
+                        <img src="images/oshi.jpg" alt="Oshi no Ko">
+                        <div class="info">
+                            <h3>Oshi no Ko</h3>
+                            <p>215.1k lượt đọc</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="rank">4</span>
+                        <img src="images/bongtoi.jpg" alt="Oshi no Ko">
+                        <div class="info">
+                            <h3>Ta muốn trở thành chúa tể bóng tối </h3>
+                            <p>213k lượt đọc</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="rank">5</span>
+                        <img src="images/tensei.jpg" alt="Oshi no Ko">
+                        <div class="info">
+                            <h3>Tensei Shitara Slime Datta Ken</h3>
+                            <p>201.3k lượt đọc</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="rank">6</span>
+                        <img src="images/oshi.jpg" alt="Oshi no Ko">
+                        <div class="info">
+                            <h3>Oshi no Ko</h3>
+                            <p>215.1k lượt đọc</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="rank">7</span>
+                        <img src="images/komi.jpg" alt="Oshi no Ko">
+                        <div class="info">
+                            <h3>Komi - Nữ thần sợ giao tiếp</h3>
+                            <p>170.5k lượt đọc</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        </br>
+        <div class="header-container">
+            <span class="header-title"> Truyện sắp ra mắt</span>
+            <i class="fa-solid fa-arrow-right" style="cursor: pointer;"></i>
+        </div>
+        <section class="manga-list">
+            <div class="manga">
+                <div class="manga-cover">
+                    <img src="images/3rd.jpg" alt="Manga Cover">
+                    <div class="overlay">
+                        <h3>Honkai Impact 3rd</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="manga">
+                <div class="manga-cover">
+                    <img src="images/sakura.jpg" alt="Manga Cover">
+                    <div class="overlay">
+                        <h3>Houkai Gakuen EX - Sakura Arc</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="manga">
+                <div class="manga-cover">
+                    <img src="images/ocg.jpg" alt="Manga Cover">
+                    <div class="overlay">
+                        <h3>Yu-Gi-Oh! OCG Structures</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="manga">
+                <div class="manga-cover">
+                    <img src="images/gx.jpg" alt="Manga Cover">
+                    <div class="overlay">
+                        <h3>Yu-Gi-Oh! GX</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="manga">
+                <div class="manga-cover">
+                    <img src="images/5ds.jpg" alt="Manga Cover">
+                    <div class="overlay">
+                        <h3>Yu-Gi-Oh! 5D's</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="manga">
+                <div class="manga-cover">
+                    <img src="images/zexal.jpg" alt="Manga Cover">
+                    <div class="overlay">
+                        <h3>Yu-Gi-Oh! Zexal</h3>
+                    </div>
+                </div>
+            </div>
+            <hr>    
+            </br>
+        </section>
+        <div class="header-container">
+            <span class="header-title"> Đã được chuyển thể</span>
+            <i class="fa-solid fa-arrow-right" style="cursor: pointer;"></i>
+        </div>
+        <section class="manga-list">
+            <div class="manga">
+                <div class="manga-cover">
+                    <img src="images/2.5.jpg" alt="Manga Cover">
+                    <div class="overlay">
+                        <h3>Sự Quyến Rũ của 2.5D</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="manga">
+                <div class="manga-cover">
+                    <img src="images/darkness.jpg" alt="Manga Cover">
+                    <div class="overlay">
+                        <h3>Bóng Tối Hoàng Kim</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="manga">
+                <div class="manga-cover">
+                    <img src="images/berserk.jpg" alt="Manga Cover">
+                    <div class="overlay">
+                        <h3>Berserk</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="manga">
+                <div class="manga-cover">
+                    <img src="images/nanatsu.jpg" alt="Manga Cover">
+                    <div class="overlay">
+                        <h3>Thất hình đại tội </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="manga">
+                <div class="manga-cover">
+                    <img src="images/death.jpg" alt="Manga Cover">
+                    <div class="overlay">
+                        <h3>Quyển Sổ Thiên Mệnh</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="manga">
+                <div class="manga-cover">
+                    <img src="images/hero.jpg" alt="Manga Cover">
+                    <div class="overlay">
+                        <h3>Học Viện Siêu Anh Hùng</h3>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
